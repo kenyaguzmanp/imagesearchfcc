@@ -7,12 +7,22 @@ var mongoose = require('mongoose');
 var searchTerm = require('./models/searchTerm');
 var google = require('googleapis');
 var request = require('request');
+var path = require('path');
+var jade = require('jade');
 dotenv.config();
 
 app.use(bodyParser.json());
 app.use(cors());
+app.use(express.static(path.join(__dirname, 'public')));
 
 mongoose.connect(process.env.MONGODB_URI);
+
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'jade');
+
+app.get('/', function(req, res, next) {
+  res.render('index');
+});
 
 app.get('/api/recentsearchs', function(req, res, next){
     searchTerm.find({},function(err, data){

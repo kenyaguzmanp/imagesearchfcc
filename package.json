@@ -17,8 +17,10 @@
     "flickrapi": "^0.6.0",
     "free-google-image-search": "^1.0.0",
     "googleapis": "^21.3.0",
+    "jade": "^1.11.0",
     "mongoose": "^4.11.9",
     "node-bing-api": "^3.2.2",
+    "path": "^0.12.7",
     "request": "^2.81.0"
   }
 }

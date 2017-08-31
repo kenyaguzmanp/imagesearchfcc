@@ -1,0 +1,32 @@
+doctype
+html( lang="en", ng-app="shortUrlApp")
+  head
+    title Search Images
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel='stylesheet')
+    link(href="/stylesheets/style.css" rel='stylesheet')
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js")
+    
+body
+  block content
+  div.text-center
+    h1 Google Image Search Abstraction Layer
+    h4
+      a(href="https://www.freecodecamp.com" target="blank") Free Code Camp: APIs and Microservices
+    h5 Technologies: NodeJs, Express, MongoDB, Mongoose, JavaScript, HTML, CSS, and Bootstrap.
+  br
+  div.instructions
+    h4 How it works
+    ul
+      li By submitting a string  as the name of the image you will return the URL, the snippet, the thumbnail and the context of each one as an object.
+      li You can paginate through the responses by adding a ?offset=2 parameter to the URL.
+      li Also you can get a list of the most recently submitted search strings.
+  br
+  h4 Example of Use
+  ul
+    li search the images by putting the name and the offset in the path, for example 'dog' like this: http://localhost:3000/api/imagesearch/dog?offset=3
+    li Browse recent search queries like this: http://localhost:3000/api/recentsearchs
+ 
