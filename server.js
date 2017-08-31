@@ -11,9 +11,8 @@ dotenv.config();
 
 app.use(bodyParser.json());
 app.use(cors());
-// process.env.e || 
-mongoose.connect('process.env.PORT || mongodb://localhost:27017/searchTerms');
 
+mongoose.connect(process.env.MONGODB_URI);
 
 app.get('/api/recentsearchs', function(req, res, next){
     searchTerm.find({},function(err, data){
